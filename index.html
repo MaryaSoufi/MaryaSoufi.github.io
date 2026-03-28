@@ -904,38 +904,6 @@
       background: rgba(124, 58, 237, 0.08);
     }
 
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0 0;
-    }
-
-    .project-gallery figure {
-      margin: 0;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--bg3);
-    }
-
-    .project-gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      object-position: top center;
-    }
-
-    .project-gallery figcaption {
-      padding: 0.6rem 0.75rem;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-      border-top: 1px solid var(--border);
-    }
-
     .case-details {
       margin-top: 1.75rem;
       border: 1px solid var(--border);
@@ -973,6 +941,370 @@
     .case-details .case-body {
       padding: 0 1.25rem 1.5rem;
       border-top: 1px solid var(--border);
+    }
+
+    /* ─── DASHBOARD PROTOTYPES (HTML/CSS — portfolio only) ─ */
+    .project-proto-wrap {
+      margin-top: 1.25rem;
+    }
+
+    .project-proto-problem {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 720px;
+      margin: 0 0 1rem;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+    }
+
+    .project-proto-problem strong {
+      color: var(--text);
+    }
+
+    .project-proto-disclaimer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 0.65rem 0 0;
+      font-style: italic;
+    }
+
+    .dash-proto {
+      --d-bg: #0c0c11;
+      --d-panel: #14141c;
+      --d-line: #2a2a3a;
+      --d-label: #6b6b80;
+      --d-accent: #7c3aed;
+      --d-positive: #34d399;
+      font-size: clamp(9px, 2vw, 11px);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--d-bg);
+      display: grid;
+      grid-template-columns: 4.2em 1fr;
+      min-height: 14rem;
+      max-height: 22rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .dash-proto__side {
+      background: var(--d-panel);
+      border-right: 1px solid var(--d-line);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.85em 0;
+      gap: 0.65em;
+    }
+
+    .dash-proto__logo {
+      width: 1.85em;
+      height: 1.85em;
+      border-radius: 6px;
+      background: linear-gradient(135deg, var(--d-accent), #a78bfa);
+      margin-bottom: 0.5em;
+    }
+
+    .dash-proto__nav-dot {
+      width: 1.35em;
+      height: 1.35em;
+      border-radius: 6px;
+      background: var(--d-line);
+    }
+
+    .dash-proto__nav-dot--active {
+      background: var(--d-accent);
+      box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.35);
+    }
+
+    .dash-proto__main {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 0.75em 0.9em 0.85em;
+      gap: 0.65em;
+    }
+
+    .dash-proto__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5em;
+    }
+
+    .dash-proto__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.05em;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .dash-proto__pill {
+      font-size: 0.75em;
+      padding: 0.35em 0.7em;
+      border-radius: 99px;
+      background: rgba(124, 58, 237, 0.18);
+      color: var(--accent);
+      border: 1px solid rgba(124, 58, 237, 0.4);
+    }
+
+    .dash-proto__kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5em;
+    }
+
+    @media (max-width: 600px) {
+      .dash-proto__kpis {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .dash-proto__kpi {
+      background: var(--d-panel);
+      border: 1px solid var(--d-line);
+      border-radius: 8px;
+      padding: 0.45em 0.55em;
+    }
+
+    .dash-proto__kpi-label {
+      font-size: 0.65em;
+      color: var(--d-label);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.25em;
+    }
+
+    .dash-proto__kpi-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.05em;
+      color: var(--text);
+    }
+
+    .dash-proto__kpi-delta {
+      font-size: 0.7em;
+      color: var(--d-positive);
+      margin-top: 0.15em;
+    }
+
+    .dash-proto__mid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 0.5em;
+      flex: 1;
+      min-height: 0;
+    }
+
+    @media (max-width: 540px) {
+      .dash-proto__mid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .dash-proto__chart {
+      background: var(--d-panel);
+      border: 1px solid var(--d-line);
+      border-radius: 8px;
+      padding: 0.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4em;
+    }
+
+    .dash-proto__chart-caption {
+      font-size: 0.7em;
+      color: var(--d-label);
+    }
+
+    .dash-proto__bars {
+      display: flex;
+      align-items: flex-end;
+      justify-content: stretch;
+      gap: 4px;
+      height: 4.8em;
+      padding-top: 0.25em;
+    }
+
+    .dash-proto__bar {
+      flex: 1 1 0;
+      align-self: flex-end;
+      border-radius: 3px 3px 0 0;
+      background: linear-gradient(180deg, var(--d-accent), #5b21b6);
+      opacity: 0.88;
+    }
+
+    .dash-proto__bar:nth-child(1) {
+      height: 32%;
+    }
+
+    .dash-proto__bar:nth-child(2) {
+      height: 48%;
+    }
+
+    .dash-proto__bar:nth-child(3) {
+      height: 68%;
+    }
+
+    .dash-proto__bar:nth-child(4) {
+      height: 52%;
+    }
+
+    .dash-proto__bar:nth-child(5) {
+      height: 82%;
+    }
+
+    .dash-proto__bar:nth-child(6) {
+      height: 44%;
+    }
+
+    .dash-proto__bar:nth-child(7) {
+      height: 92%;
+    }
+
+    .dash-proto__list {
+      background: var(--d-panel);
+      border: 1px solid var(--d-line);
+      border-radius: 8px;
+      padding: 0.45em 0.55em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35em;
+    }
+
+    .dash-proto__list-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72em;
+      padding: 0.35em 0.4em;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .dash-proto__list-row strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .dash-proto__tag {
+      font-size: 0.65em;
+      padding: 0.15em 0.45em;
+      border-radius: 4px;
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--d-positive);
+    }
+
+    /* CRM-style prototype */
+    .dash-proto--crm {
+      grid-template-columns: 1fr;
+      max-height: none;
+      min-height: 16rem;
+    }
+
+    .dash-proto--crm .dash-proto__crm-inner {
+      display: grid;
+      grid-template-columns: 9.5em 1fr;
+      gap: 0.55em;
+      flex: 1;
+      min-height: 11rem;
+    }
+
+    @media (max-width: 540px) {
+      .dash-proto--crm .dash-proto__crm-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .dash-proto--crm .dash-proto__main {
+      padding: 0.65em 0.85em;
+    }
+
+    .dash-proto__crm-list {
+      background: var(--d-panel);
+      border: 1px solid var(--d-line);
+      border-radius: 8px;
+      padding: 0.4em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3em;
+    }
+
+    .dash-proto__crm-item {
+      font-size: 0.68em;
+      padding: 0.5em 0.45em;
+      border-radius: 6px;
+      color: var(--d-label);
+      border: 1px solid transparent;
+    }
+
+    .dash-proto__crm-item--sel {
+      background: rgba(124, 58, 237, 0.12);
+      border-color: rgba(124, 58, 237, 0.35);
+      color: var(--text);
+    }
+
+    .dash-proto__crm-detail {
+      background: var(--d-panel);
+      border: 1px solid var(--d-line);
+      border-radius: 8px;
+      padding: 0.55em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45em;
+    }
+
+    .dash-proto__crm-field {
+      font-size: 0.68em;
+    }
+
+    .dash-proto__crm-field span {
+      color: var(--d-label);
+      display: block;
+      font-size: 0.95em;
+      margin-bottom: 0.15em;
+    }
+
+    .dash-proto__crm-actions {
+      display: flex;
+      gap: 0.35em;
+      margin-top: 0.25em;
+    }
+
+    .dash-proto__crm-btn {
+      font-size: 0.65em;
+      padding: 0.4em 0.65em;
+      border-radius: 6px;
+      border: 1px solid var(--d-line);
+      background: rgba(124, 58, 237, 0.2);
+      color: var(--accent);
+    }
+
+    .dash-proto__crm-pipeline {
+      display: flex;
+      gap: 0.35em;
+      margin-top: 0.35em;
+    }
+
+    .dash-proto__crm-stage {
+      flex: 1;
+      text-align: center;
+      font-size: 0.6em;
+      color: var(--d-label);
+      padding: 0.35em 0.2em;
+      border-radius: 6px;
+      border: 1px dashed var(--d-line);
+    }
+
+    .dash-proto__crm-stage--on {
+      border-style: solid;
+      border-color: var(--d-accent);
+      color: var(--accent);
+      background: rgba(124, 58, 237, 0.1);
     }
   </style>
 </head>
@@ -1064,21 +1396,70 @@
         </div>
       </div>
       <p class="project-confidential">
-        <strong style="color: var(--text);">Confidential product.</strong> Sarnex is internal / client-facing work at AREX Capital. The live application requires authentication, so visitors typically cannot browse the real product. The stills below are <strong style="color: var(--text);">redacted excerpts from the actual UI</strong> (swap in your exports by replacing files under <code style="font-size: 0.82em; color: var(--accent);">assets/sarnex/</code>).
+        <strong style="color: var(--text);">Confidential product.</strong> Sarnex is internal / client-facing work at AREX Capital. The live app requires authentication. Below is a <strong style="color: var(--text);">static HTML/CSS prototype</strong> that reflects the <em>type</em> of analytics surface the product provides—not proprietary screens. You can still drop approved PNGs into <code style="font-size: 0.82em; color: var(--accent);">assets/sarnex/</code> if needed.
       </p>
-      <div class="project-gallery" id="sarnex-gallery">
-        <figure>
-          <img src="assets/sarnex/screen-01.png" alt="Sarnex UI (redacted excerpt)" width="960" height="540" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/sarnex/screen-01.svg';" />
-          <figcaption>Approved portfolio still · replace with PNG export if you add <code style="font-size: 0.85em;">screen-01.png</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/sarnex/screen-02.png" alt="Sarnex UI (redacted excerpt)" width="960" height="540" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/sarnex/screen-02.svg';" />
-          <figcaption>Approved portfolio still · <code style="font-size: 0.85em;">screen-02.png</code></figcaption>
-        </figure>
-        <figure>
-          <img src="assets/sarnex/screen-03.png" alt="Sarnex UI (redacted excerpt)" width="960" height="540" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/sarnex/screen-03.svg';" />
-          <figcaption>Approved portfolio still · <code style="font-size: 0.85em;">screen-03.png</code></figcaption>
-        </figure>
+      <div class="project-proto-wrap reveal" id="sarnex-gallery">
+        <p class="project-proto-problem">
+          <strong>Problem this layout solves:</strong> Decision-makers were bouncing between tools to compare exposure, performance, and recent activity. The dashboard pulls KPIs, a trend read, and actionable alerts into one calm overview so users can orient in seconds and drill only when needed.
+        </p>
+        <div class="dash-proto" role="img" aria-label="Portfolio prototype of an analytics-style dashboard with sidebar, KPI cards, bar trend, and activity list">
+          <div class="dash-proto__side">
+            <div class="dash-proto__logo"></div>
+            <div class="dash-proto__nav-dot dash-proto__nav-dot--active"></div>
+            <div class="dash-proto__nav-dot"></div>
+            <div class="dash-proto__nav-dot"></div>
+            <div class="dash-proto__nav-dot"></div>
+          </div>
+          <div class="dash-proto__main">
+            <div class="dash-proto__top">
+              <span class="dash-proto__title">Overview</span>
+              <span class="dash-proto__pill">Live·Portfolio prototype</span>
+            </div>
+            <div class="dash-proto__kpis">
+              <div class="dash-proto__kpi">
+                <div class="dash-proto__kpi-label">Net exposure</div>
+                <div class="dash-proto__kpi-val">$2.4M</div>
+                <div class="dash-proto__kpi-delta">+0.8% vs prior</div>
+              </div>
+              <div class="dash-proto__kpi">
+                <div class="dash-proto__kpi-label">Day P&amp;L</div>
+                <div class="dash-proto__kpi-val">+12.6k</div>
+                <div class="dash-proto__kpi-delta">Within risk band</div>
+              </div>
+              <div class="dash-proto__kpi">
+                <div class="dash-proto__kpi-label">Open items</div>
+                <div class="dash-proto__kpi-val">7</div>
+                <div class="dash-proto__kpi-delta">3 need review</div>
+              </div>
+              <div class="dash-proto__kpi">
+                <div class="dash-proto__kpi-label">Data freshness</div>
+                <div class="dash-proto__kpi-val">2m</div>
+                <div class="dash-proto__kpi-delta">Auto-refresh on</div>
+              </div>
+            </div>
+            <div class="dash-proto__mid">
+              <div class="dash-proto__chart">
+                <span class="dash-proto__chart-caption">Relative performance (illustrative)</span>
+                <div class="dash-proto__bars">
+                  <div class="dash-proto__bar"></div>
+                  <div class="dash-proto__bar"></div>
+                  <div class="dash-proto__bar"></div>
+                  <div class="dash-proto__bar"></div>
+                  <div class="dash-proto__bar"></div>
+                  <div class="dash-proto__bar"></div>
+                  <div class="dash-proto__bar"></div>
+                </div>
+              </div>
+              <div class="dash-proto__list">
+                <span class="dash-proto__chart-caption">Needs attention</span>
+                <div class="dash-proto__list-row"><strong>Rebalance · Tech sleeve</strong><span class="dash-proto__tag">Due</span></div>
+                <div class="dash-proto__list-row"><strong>Approval · FX hedge</strong><span class="dash-proto__tag">New</span></div>
+                <div class="dash-proto__list-row"><strong>Schema · data feed</strong><span class="dash-proto__tag">Sync</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="project-proto-disclaimer">Fidelity-neutral concept for this portfolio only. Labels and numbers are placeholders.</p>
       </div>
 
       <details class="case-details reveal" id="case-sarnex">
@@ -1138,8 +1519,45 @@
         </div>
       </div>
       <p class="project-confidential">
-        <strong style="color: var(--text);">Confidential workflow tooling.</strong> Same constraint as Sarnex: no public demo. The reference image is mood-only stock (not the CRM).
+        <strong style="color: var(--text);">Confidential workflow tooling.</strong> No public demo. The preview below is a <strong style="color: var(--text);">generic CRM shell prototype</strong> that matches the interaction patterns shipped in the real product (list → detail → actions).
       </p>
+
+      <div class="project-proto-wrap reveal">
+        <p class="project-proto-problem">
+          <strong>Problem this layout solves:</strong> Reps and ops staff were losing context when jumping from long record lists into edits and handoffs. A persistent list with a stable detail pane and explicit pipeline stage reduced back-navigation and made “what happens next” obvious for every account.
+        </p>
+        <div class="dash-proto dash-proto--crm" role="img" aria-label="Portfolio prototype of a CRM list and detail layout with pipeline stages">
+          <div class="dash-proto__main">
+            <div class="dash-proto__top">
+              <span class="dash-proto__title">Accounts</span>
+              <span class="dash-proto__pill">CRM·Prototype</span>
+            </div>
+            <div class="dash-proto__crm-inner">
+              <div class="dash-proto__crm-list">
+                <div class="dash-proto__crm-item">Northwind Holdings</div>
+                <div class="dash-proto__crm-item dash-proto__crm-item--sel">Apex Capital Partners</div>
+                <div class="dash-proto__crm-item">Riverfront GmbH</div>
+                <div class="dash-proto__crm-item">Skyline Ventures</div>
+              </div>
+              <div class="dash-proto__crm-detail">
+                <div class="dash-proto__crm-field"><span>Account</span><strong>Apex Capital Partners</strong></div>
+                <div class="dash-proto__crm-field"><span>Owner</span>M. Jensen · last touch 2h ago</div>
+                <div class="dash-proto__crm-pipeline">
+                  <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Qualify</div>
+                  <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Discover</div>
+                  <div class="dash-proto__crm-stage">Proposal</div>
+                  <div class="dash-proto__crm-stage">Closed</div>
+                </div>
+                <div class="dash-proto__crm-actions">
+                  <span class="dash-proto__crm-btn">Log call</span>
+                  <span class="dash-proto__crm-btn">Create task</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="project-proto-disclaimer">Static layout study — not customer data or a live environment.</p>
+      </div>
 
       <details class="case-details reveal" id="case-crm">
         <summary>Full case study — CRM website</summary>
@@ -1182,10 +1600,6 @@
               More predictable navigation between records and tasks, clearer affordances for primary actions, and qualitative feedback that the interface feels calmer and easier to teach to new team members.
             </p>
           </div>
-          <figure class="case-figure" style="margin-top: 1rem;">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Stock mood image: laptop with charts; not the real CRM." width="1400" height="933" loading="lazy" decoding="async" />
-            <figcaption>Stock mood imagery only — not the confidential CRM. <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.</figcaption>
-          </figure>
         </div>
       </details>
     </div>
