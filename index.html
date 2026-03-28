@@ -755,18 +755,6 @@
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
     }
 
-    .work-card--split {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, min(38vw, 400px));
-      align-items: stretch;
-    }
-
-    @media (max-width: 900px) {
-      .work-card--split {
-        grid-template-columns: 1fr;
-      }
-    }
-
     .work-card:last-child {
       margin-bottom: 0;
     }
@@ -775,24 +763,10 @@
       background: #050508;
       line-height: 0;
       overflow-x: auto;
-      min-height: min(60vh, 520px);
-    }
-
-    @media (min-width: 901px) {
-      .work-card--split .work-card__preview {
-        min-height: 100%;
-      }
     }
 
     .work-card__meta {
       padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2.25rem);
-    }
-
-    @media (min-width: 901px) {
-      .work-card--split .work-card__meta {
-        border-left: 1px solid var(--border);
-        background: rgba(22, 22, 29, 0.65);
-      }
     }
 
     .work-card__meta-line {
@@ -1317,7 +1291,7 @@
       <p class="work-showcase__eyebrow reveal">Selected work</p>
       <h2 class="work-showcase__title reveal">UX &amp; product design</h2>
 
-      <article class="work-card work-card--split reveal">
+      <article class="work-card reveal">
         <div class="work-card__preview" id="sarnex-gallery">
           <div class="occ" role="img" aria-label="Redacted portfolio recreation of an operations control dashboard for administrators. No real client names.">
             <header class="occ-top">
