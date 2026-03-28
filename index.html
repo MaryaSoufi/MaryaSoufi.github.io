@@ -802,6 +802,178 @@
     .case-figure figcaption a {
       color: var(--purple-light);
     }
+
+    /* ─── PROJECTS (Hussam-style rows + Marya theme) ─────── */
+    .project-block {
+      margin-bottom: 3.5rem;
+    }
+
+    .project-block:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .project-block-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      clear: both;
+    }
+
+    .project-row::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .project-row-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      font-weight: 700;
+      color: var(--purple-light);
+      flex: 0 0 auto;
+      min-width: min(100%, 140px);
+      margin: 0;
+      padding-top: 0.35rem;
+    }
+
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem 1rem;
+      flex: 1 1 260px;
+    }
+
+    .project-btn-one {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      background: transparent;
+      border: 3px solid var(--purple-light);
+      padding: 0.5rem 1.75rem;
+      border-radius: 80px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+
+    .project-btn-one:hover {
+      cursor: pointer;
+      background: var(--purple-light);
+      color: var(--bg);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+    }
+
+    .project-btn-one--muted {
+      border-color: var(--border);
+      color: var(--text-muted);
+    }
+
+    .project-btn-one--muted:hover {
+      border-color: var(--purple);
+      color: var(--purple-light);
+      background: rgba(124, 58, 237, 0.12);
+    }
+
+    .project-confidential {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 0 1.25rem;
+      padding: 1rem 1.15rem;
+      border-radius: 10px;
+      border-left: 3px solid var(--purple);
+      background: rgba(124, 58, 237, 0.08);
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0 0;
+    }
+
+    .project-gallery figure {
+      margin: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg3);
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .project-gallery figcaption {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      border-top: 1px solid var(--border);
+    }
+
+    .case-details {
+      margin-top: 1.75rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg2);
+      overflow: hidden;
+    }
+
+    .case-details summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      list-style: none;
+      user-select: none;
+    }
+
+    .case-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .case-details summary::after {
+      content: '+';
+      float: right;
+      color: var(--purple-light);
+      font-weight: 700;
+    }
+
+    .case-details[open] summary::after {
+      content: '−';
+    }
+
+    .case-details .case-body {
+      padding: 0 1.25rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
   </style>
 </head>
 <body>
@@ -811,7 +983,7 @@
     <a href="#hero" class="nav-logo">MS</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#work">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -837,7 +1009,7 @@
     </div>
     <div class="hero-cta">
       <a href="#work" class="btn btn-accent-outline">
-        View selected work
+        View projects
       </a>
       <a href="mailto:soufi.marya@gmail.com" class="btn btn-primary">
         <!-- Mail icon -->
@@ -868,144 +1040,155 @@
 
   <div class="divider"></div>
 
-  <!-- PORTFOLIO / CASE STUDIES -->
+  <!-- PROJECTS (layout inspired by hussamsoufi.github.io — section title + name row + pill links) -->
   <section id="work">
-    <p class="section-label reveal">Selected work</p>
+    <p class="section-label reveal">Projects</p>
     <h2 class="section-title reveal">UX &amp; product design</h2>
     <p class="portfolio-intro reveal">
-      Case studies are written for recruiters and hiring managers who need to see <strong style="color: var(--text); font-weight: 600;">how problems were framed, how design decisions were made,</strong> and
-      <strong style="color: var(--text); font-weight: 600;">what changed for users and the business.</strong> Below are two representative projects from my current product work. Images are <strong style="color: var(--text); font-weight: 600;">stock mood visuals only</strong> (similar to the class of interfaces I design)—not live product or dashboard screenshots.
+      Project blocks mirror the simple pattern used on <a href="https://hussamsoufi.github.io/" target="_blank" rel="noopener noreferrer" style="color: var(--purple-light);">Sam Soufi’s portfolio</a>:
+      a section heading, a project name, and one-click actions. Full case-study depth sits in the expandable sections below.
     </p>
 
-    <article class="case-study reveal" id="case-sarnex">
-      <div class="case-top">
-        <div class="case-title-block">
-          <h3>Sarnex — product experience &amp; UI</h3>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; max-width: 560px;">
-            Web product work focused on clarity, trust, and efficient workflows for users operating in a complex domain.
-          </p>
-          <div class="case-meta">
-            <span class="case-tag case-tag--accent">UX / UI</span>
-            <span class="case-tag">Web</span>
-            <span class="case-tag">Figma → dev handoff</span>
-            <span class="case-tag">GitHub collaboration</span>
-          </div>
-        </div>
-        <div class="case-links">
-          <a href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20Sarnex%20artifacts" class="case-link case-link--primary">Request artifacts</a>
-          <a href="https://github.com/MaryaSoufi" class="case-link" target="_blank" rel="noopener">GitHub</a>
+    <div class="project-block reveal">
+      <h1 class="project-block-h1">Product &amp; UX · AREX Capital</h1>
+      <div class="project-row">
+        <h2 class="project-row-name">Sarnex</h2>
+        <div class="project-actions">
+          <a id="sarnex-website-link" class="project-btn-one" target="_blank" rel="noopener noreferrer" href="mailto:soufi.marya@gmail.com?subject=Sarnex%20%E2%80%94%20access%20to%20live%20application" title="Opens your app URL once set in the script at the bottom of this file; otherwise emails for access.">
+            Visit website
+          </a>
+          <a class="project-btn-one project-btn-one--muted" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20Sarnex%20artifacts%20%2F%20deck">
+            Request artifacts
+          </a>
+          <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
-      <div class="case-body">
-        <div class="case-block">
-          <h4>The problem</h4>
-          <p>
-            Users needed to complete critical tasks without wading through dense information or ambiguous navigation. The experience had to feel credible and calm while surfacing the right actions at the right time—especially for people who visit intermittently and cannot relearn the product on every session.
-          </p>
-        </div>
-        <div class="case-block">
-          <h4>My role</h4>
-          <p>
-            End-to-end UX and UI design support: structuring screens and flows, refining interface copy and hierarchy, prototyping in Figma, and partnering with developers on GitHub to align implementation with interaction intent and accessibility considerations.
-          </p>
-        </div>
-        <div class="case-block">
-          <h4>Process</h4>
-          <ul>
-            <li>Mapped primary user journeys and edge cases to reduce dead-ends and redundant steps.</li>
-            <li>Iterated low- to mid-fidelity layouts before locking visual patterns and component behavior.</li>
-            <li>Documented states (default, empty, error, loading) so engineering could ship predictably.</li>
-          </ul>
-        </div>
-        <div class="case-block">
-          <h4>Research &amp; validation</h4>
-          <p>
-            Combined product requirements with heuristic review and feedback from stakeholders and internal users. Adjusted layouts when we saw confusion around labeling, hierarchy, or where users expected to land after key actions.
-          </p>
-        </div>
-        <div class="case-block">
-          <h4>Solution &amp; iteration</h4>
-          <p>
-            Delivered a clearer information architecture and a more consistent UI system across core flows. Refined components through implementation feedback—tightening spacing, copy, and affordances once real data and edge cases appeared in the build.
-          </p>
-        </div>
-        <div class="case-block">
-          <h4>Outcomes</h4>
-          <p>
-            Stronger alignment between design intent and shipped UI, faster review cycles with engineering, and a product surface that internal reviewers described as easier to scan and act on. Specific metrics and artifacts are available on request where confidentiality allows.
-          </p>
-        </div>
-        <figure class="case-figure reveal">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Stock photo: person reviewing charts and metrics on a desktop monitor in an office." width="1400" height="933" loading="lazy" decoding="async" />
-          <figcaption>Mood-only stock imagery (analytics / product workspace); same <em>type</em> of surface as complex web products—not Sarnex screens. <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.</figcaption>
+      <p class="project-confidential">
+        <strong style="color: var(--text);">Confidential product.</strong> Sarnex is internal / client-facing work at AREX Capital. The live application requires authentication, so visitors typically cannot browse the real product. The stills below are <strong style="color: var(--text);">redacted excerpts from the actual UI</strong> (swap in your exports by replacing files under <code style="font-size: 0.82em; color: var(--accent);">assets/sarnex/</code>).
+      </p>
+      <div class="project-gallery" id="sarnex-gallery">
+        <figure>
+          <img src="assets/sarnex/screen-01.png" alt="Sarnex UI (redacted excerpt)" width="960" height="540" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/sarnex/screen-01.svg';" />
+          <figcaption>Approved portfolio still · replace with PNG export if you add <code style="font-size: 0.85em;">screen-01.png</code></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/sarnex/screen-02.png" alt="Sarnex UI (redacted excerpt)" width="960" height="540" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/sarnex/screen-02.svg';" />
+          <figcaption>Approved portfolio still · <code style="font-size: 0.85em;">screen-02.png</code></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/sarnex/screen-03.png" alt="Sarnex UI (redacted excerpt)" width="960" height="540" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='assets/sarnex/screen-03.svg';" />
+          <figcaption>Approved portfolio still · <code style="font-size: 0.85em;">screen-03.png</code></figcaption>
         </figure>
       </div>
-    </article>
 
-    <article class="case-study reveal" id="case-crm">
-      <div class="case-top">
-        <div class="case-title-block">
-          <h3>CRM website — operations-focused web CRM</h3>
-          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; max-width: 560px;">
-            Design work for a web-based CRM: helping teams find information quickly, complete routine tasks with less friction, and onboard new users without tribal knowledge.
-          </p>
-          <div class="case-meta">
-            <span class="case-tag case-tag--accent">B2B / internal</span>
-            <span class="case-tag">Responsive web</span>
-            <span class="case-tag">IA &amp; dashboards</span>
-            <span class="case-tag">Content design</span>
+      <details class="case-details reveal" id="case-sarnex">
+        <summary>Full case study — Sarnex</summary>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>The problem</h4>
+            <p>
+              Users needed to complete critical tasks without wading through dense information or ambiguous navigation. The experience had to feel credible and calm while surfacing the right actions at the right time—especially for people who visit intermittently and cannot relearn the product on every session.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>My role</h4>
+            <p>
+              End-to-end UX and UI design support for AREX: structuring screens and flows, refining interface copy and hierarchy, prototyping in Figma, and partnering with developers on GitHub to align implementation with interaction intent and accessibility considerations.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Process</h4>
+            <ul>
+              <li>Mapped primary user journeys and edge cases to reduce dead-ends and redundant steps.</li>
+              <li>Iterated low- to mid-fidelity layouts before locking visual patterns and component behavior.</li>
+              <li>Documented states (default, empty, error, loading) so engineering could ship predictably.</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <h4>Research &amp; validation</h4>
+            <p>
+              Combined product requirements with heuristic review and feedback from stakeholders and internal users. Adjusted layouts when we saw confusion around labeling, hierarchy, or where users expected to land after key actions.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Solution &amp; iteration</h4>
+            <p>
+              Delivered a clearer information architecture and a more consistent UI system across core flows. Refined components through implementation feedback—tightening spacing, copy, and affordances once real data and edge cases appeared in the build.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Outcomes</h4>
+            <p>
+              Stronger alignment between design intent and shipped UI, faster review cycles with engineering, and a product surface that internal reviewers described as easier to scan and act on. Specific metrics and additional artifacts are available on request where confidentiality allows.
+            </p>
           </div>
         </div>
-        <div class="case-links">
-          <a href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20CRM%20artifacts" class="case-link case-link--primary">Request artifacts</a>
-          <a href="https://github.com/MaryaSoufi" class="case-link" target="_blank" rel="noopener">GitHub</a>
+      </details>
+    </div>
+
+    <div class="project-block reveal">
+      <h1 class="project-block-h1">Web &amp; internal tools</h1>
+      <div class="project-row">
+        <h2 class="project-row-name">CRM website</h2>
+        <div class="project-actions">
+          <a class="project-btn-one" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20CRM%20artifacts">
+            Request artifacts
+          </a>
+          <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
-      <div class="case-body">
-        <div class="case-block">
-          <h4>The problem</h4>
-          <p>
-            CRM users were losing time switching between views, hunting for record context, and repeating manual steps. The website needed to support heavy daily use without cognitive overload, while still flexible enough for different roles (viewing, updating, reporting).
-          </p>
+      <p class="project-confidential">
+        <strong style="color: var(--text);">Confidential workflow tooling.</strong> Same constraint as Sarnex: no public demo. The reference image is mood-only stock (not the CRM).
+      </p>
+
+      <details class="case-details reveal" id="case-crm">
+        <summary>Full case study — CRM website</summary>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>The problem</h4>
+            <p>
+              CRM users were losing time switching between views, hunting for record context, and repeating manual steps. The website needed to support heavy daily use without cognitive overload, while still flexible enough for different roles (viewing, updating, reporting).
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>My role</h4>
+            <p>
+              UX and content design for key pages and flows: navigation model, list and detail patterns, forms and validation messaging, and dashboard-style summaries. Collaborated with developers to ensure responsive behavior and consistent components.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Process</h4>
+            <ul>
+              <li>Audited existing flows and prioritized the highest-frequency tasks for redesign.</li>
+              <li>Proposed a clearer hierarchy for record data, actions, and history so scanning beats scrolling.</li>
+              <li>Standardized labels, empty states, and microcopy to reduce ambiguity and support training.</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <h4>Research &amp; validation</h4>
+            <p>
+              Used interviews and informal walkthroughs with people who use the CRM daily. Stress-tested layouts against realistic record complexity and messy data. Iterated table density, filters, and primary actions based on where users hesitated or backtracked.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Solution &amp; iteration</h4>
+            <p>
+              Delivered updated page templates and interaction patterns that shorten common paths and expose context earlier in the journey. Followed up post-launch with tweaks to spacing, column priority, and terminology as usage patterns emerged.
+            </p>
+          </div>
+          <div class="case-block">
+            <h4>Outcomes</h4>
+            <p>
+              More predictable navigation between records and tasks, clearer affordances for primary actions, and qualitative feedback that the interface feels calmer and easier to teach to new team members.
+            </p>
+          </div>
+          <figure class="case-figure" style="margin-top: 1rem;">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Stock mood image: laptop with charts; not the real CRM." width="1400" height="933" loading="lazy" decoding="async" />
+            <figcaption>Stock mood imagery only — not the confidential CRM. <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.</figcaption>
+          </figure>
         </div>
-        <div class="case-block">
-          <h4>My role</h4>
-          <p>
-            UX and content design for key pages and flows: navigation model, list and detail patterns, forms and validation messaging, and dashboard-style summaries. Collaborated with developers to ensure responsive behavior and consistent components.
-          </p>
-        </div>
-        <div class="case-block">
-          <h4>Process</h4>
-          <ul>
-            <li>Audited existing flows and prioritized the highest-frequency tasks for redesign.</li>
-            <li>Proposed a clearer hierarchy for record data, actions, and history so scanning beats scrolling.</li>
-            <li>Standardized labels, empty states, and microcopy to reduce ambiguity and support training.</li>
-          </ul>
-        </div>
-        <div class="case-block">
-          <h4>Research &amp; validation</h4>
-          <p>
-            Used interviews and informal walkthroughs with people who use the CRM daily. Stress-tested layouts against realistic record complexity and “messy” data. Iterated table density, filters, and primary actions based on where users hesitated or backtracked.
-          </p>
-        </div>
-        <div class="case-block">
-          <h4>Solution &amp; iteration</h4>
-          <p>
-            Delivered updated page templates and interaction patterns that shorten common paths and expose context earlier in the journey. Followed up post-launch with tweaks to spacing, column priority, and terminology as usage patterns emerged.
-          </p>
-        </div>
-        <div class="case-block">
-          <h4>Outcomes</h4>
-          <p>
-            More predictable navigation between records and tasks, clearer affordances for primary actions, and qualitative feedback that the interface feels calmer and easier to teach to new team members. Deeper measurement detail is available on request where confidentiality allows.
-          </p>
-        </div>
-        <figure class="case-figure reveal">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Stock photo: laptop on a desk displaying charts and business dashboards." width="1400" height="933" loading="lazy" decoding="async" />
-          <figcaption>Mood-only stock imagery suggesting operations tooling and information-dense layouts—not the CRM website. <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.</figcaption>
-        </figure>
-      </div>
-    </article>
+      </details>
+    </div>
   </section>
 
   <div class="divider"></div>
@@ -1234,6 +1417,19 @@
       <a href="https://github.com/MaryaSoufi" target="_blank" rel="noopener">GitHub</a>
     </p>
   </footer>
+
+  <!-- Paste your real Sarnex app URL here for the “Visit website” button (otherwise it stays on the mailto fallback). -->
+  <script>
+    (function () {
+      var SARNEX_LIVE_URL = '';
+      var link = document.getElementById('sarnex-website-link');
+      if (!link) return;
+      if (SARNEX_LIVE_URL) {
+        link.href = SARNEX_LIVE_URL;
+        link.title = 'Opens the Sarnex web application (login or permissions may be required).';
+      }
+    })();
+  </script>
 
   <!-- Scroll reveal script -->
   <script>
