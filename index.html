@@ -619,50 +619,6 @@
       }
     }
 
-    /* ─── Project CTAs (work cards) ──────────────────────── */
-    .project-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.75rem 1rem;
-      flex: 1 1 260px;
-    }
-
-    .project-btn-one {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text);
-      background: transparent;
-      border: 3px solid var(--purple-light);
-      padding: 0.5rem 1.75rem;
-      border-radius: 80px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.25s;
-    }
-
-    .project-btn-one:hover {
-      cursor: pointer;
-      background: var(--purple-light);
-      color: var(--bg);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
-    }
-
-    .project-btn-one--muted {
-      border-color: var(--border);
-      color: var(--text-muted);
-    }
-
-    .project-btn-one--muted:hover {
-      border-color: var(--purple);
-      color: var(--purple-light);
-      background: rgba(124, 58, 237, 0.12);
-    }
-
     .case-study-details {
       margin-top: 1.25rem;
       border: 1px solid var(--border);
@@ -786,26 +742,8 @@
       font-weight: 700;
       letter-spacing: -0.03em;
       line-height: 1.08;
-      margin-bottom: 1rem;
+      margin-bottom: 2.5rem;
       color: var(--text);
-    }
-
-    .work-showcase__ref {
-      color: var(--text-muted);
-      line-height: 1.75;
-      max-width: 38rem;
-      margin-bottom: 3rem;
-      font-size: 0.95rem;
-    }
-
-    .work-showcase__ref a {
-      color: var(--purple-light);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(167, 139, 250, 0.4);
-    }
-
-    .work-showcase__ref a:hover {
-      border-bottom-color: var(--purple-light);
     }
 
     .work-card {
@@ -1330,11 +1268,6 @@
     <div class="work-showcase">
       <p class="work-showcase__eyebrow reveal">Selected work</p>
       <h2 class="work-showcase__title reveal">UX &amp; product design</h2>
-      <p class="work-showcase__ref reveal">
-        Large preview frames and clear project hierarchy, similar in spirit to designer portfolio layouts such as
-        <a href="https://dribbble.com/shots/25396299-Personal-Website-For-UI-Designer" target="_blank" rel="noopener noreferrer">Personal Website For UI Designer on Dribbble</a>.
-        The preview is a control-center dashboard rebuilt in HTML/CSS from work at AREX; <strong style="color: var(--text);">client names and identities are removed</strong> for confidentiality.
-      </p>
 
       <article class="work-card reveal">
         <div class="work-card__preview" id="sarnex-gallery">
@@ -1460,11 +1393,6 @@
         <div class="work-card__meta">
           <div class="work-card__head">
             <h3>Sarnex — investment dashboard redesign</h3>
-            <div class="project-actions" style="flex: unset; margin: 0;">
-              <a id="sarnex-website-link" class="project-btn-one" target="_blank" rel="noopener noreferrer" href="mailto:soufi.marya@gmail.com?subject=Sarnex%20%E2%80%94%20access%20to%20live%20application">Visit website</a>
-              <a class="project-btn-one project-btn-one--muted" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20operations%20artifacts">Request artifacts</a>
-              <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
           </div>
           <div class="work-card__tags">
             <span class="work-card__tag work-card__tag--accent">AREX Capital</span>
@@ -1733,19 +1661,6 @@
       <a href="https://github.com/MaryaSoufi" target="_blank" rel="noopener">GitHub</a>
     </p>
   </footer>
-
-  <!-- Paste your real Sarnex app URL here for the “Visit website” button (otherwise it stays on the mailto fallback). -->
-  <script>
-    (function () {
-      var SARNEX_LIVE_URL = '';
-      var link = document.getElementById('sarnex-website-link');
-      if (!link) return;
-      if (SARNEX_LIVE_URL) {
-        link.href = SARNEX_LIVE_URL;
-        link.title = 'Opens the Sarnex web application (login or permissions may be required).';
-      }
-    })();
-  </script>
 
   <!-- Scroll reveal script -->
   <script>
