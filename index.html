@@ -1306,6 +1306,500 @@
       color: var(--accent);
       background: rgba(124, 58, 237, 0.1);
     }
+
+    /* ─── SELECTED WORK (Dribbble-style project cards) ─────── */
+    .work-showcase {
+      max-width: 100%;
+    }
+
+    .work-showcase__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--purple-light);
+      margin-bottom: 0.65rem;
+    }
+
+    .work-showcase__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .work-showcase__ref {
+      color: var(--text-muted);
+      line-height: 1.75;
+      max-width: 38rem;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    .work-showcase__ref a {
+      color: var(--purple-light);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(167, 139, 250, 0.4);
+    }
+
+    .work-showcase__ref a:hover {
+      border-bottom-color: var(--purple-light);
+    }
+
+    .work-card {
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg2);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .work-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .work-card__preview {
+      background: #050508;
+      line-height: 0;
+      overflow-x: auto;
+    }
+
+    .work-card__meta {
+      padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2.25rem);
+    }
+
+    .work-card__head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .work-card__head h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .work-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .work-card__tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.65rem;
+      border-radius: 6px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .work-card__tag--accent {
+      border-color: rgba(124, 58, 237, 0.45);
+      color: var(--purple-light);
+    }
+
+    .work-card__problem {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0 0 0.5rem;
+    }
+
+    .work-card__problem strong {
+      color: var(--text);
+    }
+
+    .work-card__note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin: 0.5rem 0 0;
+    }
+
+    /* Operations control center — replica palette from reference UI */
+    .occ {
+      --occ-bg: #0b0e14;
+      --occ-panel: #0f1419;
+      --occ-border: #1e293b;
+      --occ-blue: #3b82f6;
+      --occ-text: #e2e8f0;
+      --occ-muted: #64748b;
+      --occ-green: #22c55e;
+      --occ-red: #f87171;
+      --occ-gold: #eab308;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: clamp(7.5px, 1.15vw, 10.5px);
+      background: var(--occ-bg);
+      color: var(--occ-text);
+      min-width: 52rem;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    .occ-top {
+      display: flex;
+      align-items: center;
+      gap: 1.25em;
+      padding: 0.85em 1.25em;
+      border-bottom: 1px solid var(--occ-border);
+      background: rgba(15, 20, 25, 0.95);
+    }
+
+    .occ-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.55em;
+      font-weight: 700;
+      font-size: 1em;
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    .occ-brand em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--occ-muted);
+      font-size: 0.75em;
+    }
+
+    .occ-diamond {
+      width: 1.35em;
+      height: 1.35em;
+      background: linear-gradient(135deg, #facc15, var(--occ-gold));
+      transform: rotate(45deg);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .occ-search {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      max-width: 42em;
+      margin: 0 auto;
+    }
+
+    .occ-search input {
+      width: 100%;
+      padding: 0.55em 0.85em;
+      border-radius: 8px;
+      border: 1px solid var(--occ-border);
+      background: var(--occ-panel);
+      color: var(--occ-muted);
+      font-size: 0.9em;
+    }
+
+    .occ-search-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .occ-kbd {
+      position: absolute;
+      right: 0.5em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.65em;
+      color: var(--occ-muted);
+      border: 1px solid var(--occ-border);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      background: var(--occ-bg);
+    }
+
+    .occ-tools {
+      display: flex;
+      align-items: center;
+      gap: 0.85em;
+      margin-left: auto;
+    }
+
+    .occ-icon-btn {
+      width: 2em;
+      height: 2em;
+      border-radius: 8px;
+      border: 1px solid var(--occ-border);
+      background: var(--occ-panel);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--occ-muted);
+      font-size: 0.9em;
+    }
+
+    .occ-bell-wrap {
+      position: relative;
+    }
+
+    .occ-badge {
+      position: absolute;
+      top: -0.35em;
+      right: -0.35em;
+      background: #dc2626;
+      color: #fff;
+      font-size: 0.58em;
+      font-weight: 700;
+      min-width: 1.35em;
+      height: 1.35em;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .occ-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.55em;
+    }
+
+    .occ-avatar {
+      width: 2.15em;
+      height: 2.15em;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--occ-blue), #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75em;
+    }
+
+    .occ-profile small {
+      display: block;
+      color: var(--occ-muted);
+      font-size: 0.75em;
+      max-width: 11em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .occ-role {
+      display: block;
+      margin-top: 0.2em;
+      font-size: 0.65em;
+      color: var(--occ-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .occ-body {
+      display: flex;
+      min-height: 28em;
+    }
+
+    .occ-side {
+      width: 14.5em;
+      flex-shrink: 0;
+      border-right: 1px solid var(--occ-border);
+      background: var(--occ-panel);
+      padding: 1em 0.65em;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .occ-nav-group {
+      margin-bottom: 1.1em;
+    }
+
+    .occ-nav-label {
+      font-size: 0.62em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--occ-muted);
+      margin: 0 0.5em 0.45em;
+    }
+
+    .occ-nav-item {
+      display: block;
+      padding: 0.45em 0.65em;
+      border-radius: 6px;
+      color: var(--occ-muted);
+      font-size: 0.82em;
+      margin-bottom: 0.2em;
+      border: 1px solid transparent;
+    }
+
+    .occ-nav-item--active {
+      background: rgba(59, 130, 246, 0.18);
+      border-color: rgba(59, 130, 246, 0.35);
+      color: var(--occ-text);
+    }
+
+    .occ-main {
+      flex: 1;
+      padding: 1.1em 1.25em 1.25em;
+      min-width: 0;
+    }
+
+    .occ-main h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45em;
+      font-weight: 700;
+      margin: 0 0 0.25em;
+      letter-spacing: -0.02em;
+    }
+
+    .occ-sub {
+      font-size: 0.82em;
+      color: var(--occ-muted);
+      margin: 0 0 1.1em;
+      line-height: 1.5;
+    }
+
+    .occ-kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65em;
+      margin-bottom: 0.85em;
+    }
+
+    @media (max-width: 700px) {
+      .occ-kpis {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .occ-kpi {
+      background: var(--occ-panel);
+      border: 1px solid var(--occ-border);
+      border-radius: 10px;
+      padding: 0.65em 0.7em;
+    }
+
+    .occ-kpi h4 {
+      margin: 0 0 0.35em;
+      font-size: 0.65em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--occ-muted);
+    }
+
+    .occ-kpi .val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15em;
+      font-weight: 700;
+    }
+
+    .occ-kpi .sub {
+      font-size: 0.72em;
+      color: var(--occ-muted);
+      margin-top: 0.25em;
+    }
+
+    .occ-kpi .val--green {
+      color: var(--occ-green);
+    }
+
+    .occ-kpi .val--red {
+      color: var(--occ-red);
+    }
+
+    .occ-chart-box {
+      background: var(--occ-panel);
+      border: 1px solid var(--occ-border);
+      border-radius: 10px;
+      padding: 0.65em 0.75em 0.5em;
+      margin-bottom: 0.75em;
+    }
+
+    .occ-chart-box h4 {
+      margin: 0 0 0.15em;
+      font-size: 0.78em;
+      font-weight: 600;
+    }
+
+    .occ-chart-box .subcap {
+      font-size: 0.68em;
+      color: var(--occ-muted);
+      margin-bottom: 0.45em;
+    }
+
+    .occ-chart-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .occ-grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.65em;
+    }
+
+    @media (max-width: 640px) {
+      .occ-grid2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .occ-panel-block {
+      background: var(--occ-panel);
+      border: 1px solid var(--occ-border);
+      border-radius: 10px;
+      padding: 0.65em 0.75em;
+    }
+
+    .occ-panel-block h4 {
+      margin: 0 0 0.5em;
+      font-size: 0.68em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--occ-muted);
+    }
+
+    .occ-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4em 0;
+      border-top: 1px solid var(--occ-border);
+      font-size: 0.78em;
+    }
+
+    .occ-row:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .occ-row strong {
+      color: var(--occ-text);
+      font-weight: 600;
+    }
+
+    .occ-qlink {
+      display: block;
+      padding: 0.35em 0;
+      font-size: 0.78em;
+      color: var(--occ-blue);
+    }
+
+    .occ-foot {
+      margin-top: auto;
+      padding: 0.85em 0.15em 0;
+      border-top: 1px solid var(--occ-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.72em;
+      color: var(--occ-muted);
+    }
   </style>
 </head>
 <body>
@@ -1372,236 +1866,300 @@
 
   <div class="divider"></div>
 
-  <!-- PROJECTS (layout inspired by hussamsoufi.github.io — section title + name row + pill links) -->
+  <!-- PROJECTS: Dribbble-style selected work cards + Operations Control Center replica (redacted) -->
   <section id="work">
-    <p class="section-label reveal">Projects</p>
-    <h2 class="section-title reveal">UX &amp; product design</h2>
-    <p class="portfolio-intro reveal">
-      Project blocks mirror the simple pattern used on <a href="https://hussamsoufi.github.io/" target="_blank" rel="noopener noreferrer" style="color: var(--purple-light);">Sam Soufi’s portfolio</a>:
-      a section heading, a project name, and one-click actions. Full case-study depth sits in the expandable sections below.
-    </p>
-
-    <div class="project-block reveal">
-      <h1 class="project-block-h1">Product &amp; UX · AREX Capital</h1>
-      <div class="project-row">
-        <h2 class="project-row-name">Sarnex</h2>
-        <div class="project-actions">
-          <a id="sarnex-website-link" class="project-btn-one" target="_blank" rel="noopener noreferrer" href="mailto:soufi.marya@gmail.com?subject=Sarnex%20%E2%80%94%20access%20to%20live%20application" title="Opens your app URL once set in the script at the bottom of this file; otherwise emails for access.">
-            Visit website
-          </a>
-          <a class="project-btn-one project-btn-one--muted" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20Sarnex%20artifacts%20%2F%20deck">
-            Request artifacts
-          </a>
-          <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </div>
-      <p class="project-confidential">
-        <strong style="color: var(--text);">Confidential product.</strong> Sarnex is internal / client-facing work at AREX Capital. The live app requires authentication. Below is a <strong style="color: var(--text);">static HTML/CSS prototype</strong> that reflects the <em>type</em> of analytics surface the product provides—not proprietary screens. You can still drop approved PNGs into <code style="font-size: 0.82em; color: var(--accent);">assets/sarnex/</code> if needed.
-      </p>
-      <div class="project-proto-wrap reveal" id="sarnex-gallery">
-        <p class="project-proto-problem">
-          <strong>Problem this layout solves:</strong> Decision-makers were bouncing between tools to compare exposure, performance, and recent activity. The dashboard pulls KPIs, a trend read, and actionable alerts into one calm overview so users can orient in seconds and drill only when needed.
-        </p>
-        <div class="dash-proto" role="img" aria-label="Portfolio prototype of an analytics-style dashboard with sidebar, KPI cards, bar trend, and activity list">
-          <div class="dash-proto__side">
-            <div class="dash-proto__logo"></div>
-            <div class="dash-proto__nav-dot dash-proto__nav-dot--active"></div>
-            <div class="dash-proto__nav-dot"></div>
-            <div class="dash-proto__nav-dot"></div>
-            <div class="dash-proto__nav-dot"></div>
-          </div>
-          <div class="dash-proto__main">
-            <div class="dash-proto__top">
-              <span class="dash-proto__title">Overview</span>
-              <span class="dash-proto__pill">Live·Portfolio prototype</span>
-            </div>
-            <div class="dash-proto__kpis">
-              <div class="dash-proto__kpi">
-                <div class="dash-proto__kpi-label">Net exposure</div>
-                <div class="dash-proto__kpi-val">$2.4M</div>
-                <div class="dash-proto__kpi-delta">+0.8% vs prior</div>
-              </div>
-              <div class="dash-proto__kpi">
-                <div class="dash-proto__kpi-label">Day P&amp;L</div>
-                <div class="dash-proto__kpi-val">+12.6k</div>
-                <div class="dash-proto__kpi-delta">Within risk band</div>
-              </div>
-              <div class="dash-proto__kpi">
-                <div class="dash-proto__kpi-label">Open items</div>
-                <div class="dash-proto__kpi-val">7</div>
-                <div class="dash-proto__kpi-delta">3 need review</div>
-              </div>
-              <div class="dash-proto__kpi">
-                <div class="dash-proto__kpi-label">Data freshness</div>
-                <div class="dash-proto__kpi-val">2m</div>
-                <div class="dash-proto__kpi-delta">Auto-refresh on</div>
-              </div>
-            </div>
-            <div class="dash-proto__mid">
-              <div class="dash-proto__chart">
-                <span class="dash-proto__chart-caption">Relative performance (illustrative)</span>
-                <div class="dash-proto__bars">
-                  <div class="dash-proto__bar"></div>
-                  <div class="dash-proto__bar"></div>
-                  <div class="dash-proto__bar"></div>
-                  <div class="dash-proto__bar"></div>
-                  <div class="dash-proto__bar"></div>
-                  <div class="dash-proto__bar"></div>
-                  <div class="dash-proto__bar"></div>
-                </div>
-              </div>
-              <div class="dash-proto__list">
-                <span class="dash-proto__chart-caption">Needs attention</span>
-                <div class="dash-proto__list-row"><strong>Rebalance · Tech sleeve</strong><span class="dash-proto__tag">Due</span></div>
-                <div class="dash-proto__list-row"><strong>Approval · FX hedge</strong><span class="dash-proto__tag">New</span></div>
-                <div class="dash-proto__list-row"><strong>Schema · data feed</strong><span class="dash-proto__tag">Sync</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="project-proto-disclaimer">Fidelity-neutral concept for this portfolio only. Labels and numbers are placeholders.</p>
-      </div>
-
-      <details class="case-details reveal" id="case-sarnex">
-        <summary>Full case study — Sarnex</summary>
-        <div class="case-body">
-          <div class="case-block">
-            <h4>The problem</h4>
-            <p>
-              Users needed to complete critical tasks without wading through dense information or ambiguous navigation. The experience had to feel credible and calm while surfacing the right actions at the right time—especially for people who visit intermittently and cannot relearn the product on every session.
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>My role</h4>
-            <p>
-              End-to-end UX and UI design support for AREX: structuring screens and flows, refining interface copy and hierarchy, prototyping in Figma, and partnering with developers on GitHub to align implementation with interaction intent and accessibility considerations.
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>Process</h4>
-            <ul>
-              <li>Mapped primary user journeys and edge cases to reduce dead-ends and redundant steps.</li>
-              <li>Iterated low- to mid-fidelity layouts before locking visual patterns and component behavior.</li>
-              <li>Documented states (default, empty, error, loading) so engineering could ship predictably.</li>
-            </ul>
-          </div>
-          <div class="case-block">
-            <h4>Research &amp; validation</h4>
-            <p>
-              Combined product requirements with heuristic review and feedback from stakeholders and internal users. Adjusted layouts when we saw confusion around labeling, hierarchy, or where users expected to land after key actions.
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>Solution &amp; iteration</h4>
-            <p>
-              Delivered a clearer information architecture and a more consistent UI system across core flows. Refined components through implementation feedback—tightening spacing, copy, and affordances once real data and edge cases appeared in the build.
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>Outcomes</h4>
-            <p>
-              Stronger alignment between design intent and shipped UI, faster review cycles with engineering, and a product surface that internal reviewers described as easier to scan and act on. Specific metrics and additional artifacts are available on request where confidentiality allows.
-            </p>
-          </div>
-        </div>
-      </details>
-    </div>
-
-    <div class="project-block reveal">
-      <h1 class="project-block-h1">Web &amp; internal tools</h1>
-      <div class="project-row">
-        <h2 class="project-row-name">CRM website</h2>
-        <div class="project-actions">
-          <a class="project-btn-one" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20CRM%20artifacts">
-            Request artifacts
-          </a>
-          <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </div>
-      <p class="project-confidential">
-        <strong style="color: var(--text);">Confidential workflow tooling.</strong> No public demo. The preview below is a <strong style="color: var(--text);">generic CRM shell prototype</strong> that matches the interaction patterns shipped in the real product (list → detail → actions).
+    <div class="work-showcase">
+      <p class="work-showcase__eyebrow reveal">Selected work</p>
+      <h2 class="work-showcase__title reveal">UX &amp; product design</h2>
+      <p class="work-showcase__ref reveal">
+        Large preview frames and clear project hierarchy, similar in spirit to designer portfolio layouts such as
+        <a href="https://dribbble.com/shots/25396299-Personal-Website-For-UI-Designer" target="_blank" rel="noopener noreferrer">Personal Website For UI Designer on Dribbble</a>.
+        Below, a control-center dashboard is rebuilt in HTML/CSS from a reference companion to my AREX work; <strong style="color: var(--text);">client names and identities are removed</strong> for confidentiality.
       </p>
 
-      <div class="project-proto-wrap reveal">
-        <p class="project-proto-problem">
-          <strong>Problem this layout solves:</strong> Reps and ops staff were losing context when jumping from long record lists into edits and handoffs. A persistent list with a stable detail pane and explicit pipeline stage reduced back-navigation and made “what happens next” obvious for every account.
-        </p>
-        <div class="dash-proto dash-proto--crm" role="img" aria-label="Portfolio prototype of a CRM list and detail layout with pipeline stages">
-          <div class="dash-proto__main">
-            <div class="dash-proto__top">
-              <span class="dash-proto__title">Accounts</span>
-              <span class="dash-proto__pill">CRM·Prototype</span>
-            </div>
-            <div class="dash-proto__crm-inner">
-              <div class="dash-proto__crm-list">
-                <div class="dash-proto__crm-item">Northwind Holdings</div>
-                <div class="dash-proto__crm-item dash-proto__crm-item--sel">Apex Capital Partners</div>
-                <div class="dash-proto__crm-item">Riverfront GmbH</div>
-                <div class="dash-proto__crm-item">Skyline Ventures</div>
-              </div>
-              <div class="dash-proto__crm-detail">
-                <div class="dash-proto__crm-field"><span>Account</span><strong>Apex Capital Partners</strong></div>
-                <div class="dash-proto__crm-field"><span>Owner</span>M. Jensen · last touch 2h ago</div>
-                <div class="dash-proto__crm-pipeline">
-                  <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Qualify</div>
-                  <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Discover</div>
-                  <div class="dash-proto__crm-stage">Proposal</div>
-                  <div class="dash-proto__crm-stage">Closed</div>
-                </div>
-                <div class="dash-proto__crm-actions">
-                  <span class="dash-proto__crm-btn">Log call</span>
-                  <span class="dash-proto__crm-btn">Create task</span>
+      <article class="work-card reveal">
+        <div class="work-card__preview" id="sarnex-gallery">
+          <div class="occ" role="img" aria-label="Redacted portfolio recreation of an operations control dashboard for administrators. No real client names.">
+            <header class="occ-top">
+              <div class="occ-brand"><span class="occ-diamond" aria-hidden="true"></span> OCC <em>CONTROL CENTER</em></div>
+              <div class="occ-search">
+                <div class="occ-search-wrap">
+                  <input type="text" readonly tabindex="-1" placeholder="Search clients, brokers, accounts…" />
+                  <span class="occ-kbd">⌘K</span>
                 </div>
               </div>
+              <div class="occ-tools">
+                <span class="occ-icon-btn" title="Theme" aria-hidden="true">☀</span>
+                <div class="occ-bell-wrap" aria-hidden="true">
+                  <span class="occ-icon-btn">🔔</span>
+                  <span class="occ-badge">3</span>
+                </div>
+                <div class="occ-profile">
+                  <div class="occ-avatar" aria-hidden="true">AU</div>
+                  <div>
+                    <small>user@organization…</small>
+                    <span class="occ-role">Admin</span>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div class="occ-body">
+              <aside class="occ-side">
+                <div class="occ-nav-group">
+                  <p class="occ-nav-label">Operations</p>
+                  <span class="occ-nav-item occ-nav-item--active">Clients</span>
+                  <span class="occ-nav-item">Brokers</span>
+                </div>
+                <div class="occ-nav-group">
+                  <p class="occ-nav-label">Platform</p>
+                  <span class="occ-nav-item">Products / Features</span>
+                  <span class="occ-nav-item">Reports &amp; Analytics</span>
+                </div>
+                <div class="occ-nav-group">
+                  <p class="occ-nav-label">Infrastructure</p>
+                  <span class="occ-nav-item">Connectivity</span>
+                  <span class="occ-nav-item">Management</span>
+                  <span class="occ-nav-item">VM Control</span>
+                </div>
+                <div class="occ-nav-group">
+                  <p class="occ-nav-label">System</p>
+                  <span class="occ-nav-item">Settings</span>
+                </div>
+                <div class="occ-foot">
+                  <small>Session</small><span aria-hidden="true">⏻</span>
+                </div>
+              </aside>
+              <main class="occ-main">
+                <h1>Operations Control Center</h1>
+                <p class="occ-sub">Administrative dashboard for portfolio management and broker operations. Figures are illustrative.</p>
+                <div class="occ-kpis">
+                  <div class="occ-kpi">
+                    <h4>Total clients</h4>
+                    <div class="val">7</div>
+                    <div class="sub">Active portfolios</div>
+                  </div>
+                  <div class="occ-kpi">
+                    <h4>Total AUM</h4>
+                    <div class="val">$2,397,780</div>
+                    <div class="sub">Aggregated (sample)</div>
+                  </div>
+                  <div class="occ-kpi">
+                    <h4>Connectivity issues</h4>
+                    <div class="val val--red">8</div>
+                    <div class="sub">3 disconnected · 5 inactive</div>
+                  </div>
+                  <div class="occ-kpi">
+                    <h4>System status</h4>
+                    <div class="val val--green">Online</div>
+                    <div class="sub">All services operational</div>
+                  </div>
+                </div>
+                <div class="occ-chart-box">
+                  <h4>AUM over time</h4>
+                  <p class="subcap">Portfolio equity trend (illustrative curve)</p>
+                  <svg class="occ-chart-svg" viewBox="0 0 480 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="occLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#60a5fa" />
+                        <stop offset="100%" stop-color="#3b82f6" />
+                      </linearGradient>
+                      <linearGradient id="occFill" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(59,130,246,0.25)" />
+                        <stop offset="100%" stop-color="rgba(59,130,246,0)" />
+                      </linearGradient>
+                    </defs>
+                    <line x1="40" y1="10" x2="40" y2="105" stroke="#1e293b" stroke-width="1" />
+                    <line x1="40" y1="105" x2="470" y2="105" stroke="#1e293b" stroke-width="1" />
+                    <text x="4" y="18" fill="#475569" font-size="9">$2.5M</text>
+                    <text x="4" y="58" fill="#475569" font-size="9">$2.35M</text>
+                    <text x="4" y="98" fill="#475569" font-size="9">$2.2M</text>
+                    <path d="M 55 72 C 90 48, 120 88, 155 52 C 190 28, 220 68, 250 42 C 295 12, 330 58, 365 38 C 400 22, 430 48, 458 35" fill="none" stroke="url(#occLine)" stroke-width="2.2" stroke-linecap="round" />
+                    <path d="M 55 72 C 90 48, 120 88, 155 52 C 190 28, 220 68, 250 42 C 295 12, 330 58, 365 38 C 400 22, 430 48, 458 35 L 458 105 L 55 105 Z" fill="url(#occFill)" />
+                    <text x="52" y="116" fill="#475569" font-size="8">Mar 21</text>
+                    <text x="380" y="116" fill="#475569" font-size="8">Mar 28</text>
+                  </svg>
+                </div>
+                <div class="occ-grid2">
+                  <div class="occ-panel-block">
+                    <h4>Top clients by AUM</h4>
+                    <div class="occ-row"><strong>Confidential client A</strong><span>$612,400</span></div>
+                    <div class="occ-row"><strong>Confidential client B</strong><span>$589,120</span></div>
+                    <div class="occ-row"><strong>Confidential client C</strong><span>$401,050</span></div>
+                  </div>
+                  <div class="occ-panel-block">
+                    <h4>Quick navigation</h4>
+                    <span class="occ-qlink">Client portfolio</span>
+                    <span class="occ-qlink">Client management</span>
+                    <span class="occ-qlink">MT connectivity</span>
+                    <span class="occ-qlink">Accounts attention</span>
+                  </div>
+                </div>
+              </main>
             </div>
           </div>
         </div>
-        <p class="project-proto-disclaimer">Static layout study — not customer data or a live environment.</p>
-      </div>
+        <div class="work-card__meta">
+          <div class="work-card__head">
+            <h3>Operations control center</h3>
+            <div class="project-actions" style="flex: unset; margin: 0;">
+              <a id="sarnex-website-link" class="project-btn-one" target="_blank" rel="noopener noreferrer" href="mailto:soufi.marya@gmail.com?subject=Sarnex%20%E2%80%94%20access%20to%20live%20application">Visit website</a>
+              <a class="project-btn-one project-btn-one--muted" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20operations%20artifacts">Request artifacts</a>
+              <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+          <div class="work-card__tags">
+            <span class="work-card__tag work-card__tag--accent">AREX Capital</span>
+            <span class="work-card__tag">Web app</span>
+            <span class="work-card__tag">Admin UX</span>
+            <span class="work-card__tag">Dense data UI</span>
+          </div>
+          <p class="work-card__problem">
+            <strong>Problem solved:</strong> Portfolio and broker teams needed one place to see health, AUM, connectivity risk, and highest-value relationships—instead of scattered spreadsheets and consoles. This home view surfaces the four signals admins check first, a trend line for equity context, and shortcuts into day-to-day workflows.
+          </p>
+          <p class="work-card__note">Redacted recreation for this portfolio only; not a live data connection. Original layout informed by internal product work.</p>
 
-      <details class="case-details reveal" id="case-crm">
-        <summary>Full case study — CRM website</summary>
-        <div class="case-body">
-          <div class="case-block">
-            <h4>The problem</h4>
-            <p>
-              CRM users were losing time switching between views, hunting for record context, and repeating manual steps. The website needed to support heavy daily use without cognitive overload, while still flexible enough for different roles (viewing, updating, reporting).
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>My role</h4>
-            <p>
-              UX and content design for key pages and flows: navigation model, list and detail patterns, forms and validation messaging, and dashboard-style summaries. Collaborated with developers to ensure responsive behavior and consistent components.
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>Process</h4>
-            <ul>
-              <li>Audited existing flows and prioritized the highest-frequency tasks for redesign.</li>
-              <li>Proposed a clearer hierarchy for record data, actions, and history so scanning beats scrolling.</li>
-              <li>Standardized labels, empty states, and microcopy to reduce ambiguity and support training.</li>
-            </ul>
-          </div>
-          <div class="case-block">
-            <h4>Research &amp; validation</h4>
-            <p>
-              Used interviews and informal walkthroughs with people who use the CRM daily. Stress-tested layouts against realistic record complexity and messy data. Iterated table density, filters, and primary actions based on where users hesitated or backtracked.
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>Solution &amp; iteration</h4>
-            <p>
-              Delivered updated page templates and interaction patterns that shorten common paths and expose context earlier in the journey. Followed up post-launch with tweaks to spacing, column priority, and terminology as usage patterns emerged.
-            </p>
-          </div>
-          <div class="case-block">
-            <h4>Outcomes</h4>
-            <p>
-              More predictable navigation between records and tasks, clearer affordances for primary actions, and qualitative feedback that the interface feels calmer and easier to teach to new team members.
-            </p>
+          <details class="case-details reveal" id="case-sarnex" style="margin-top: 1.25rem;">
+            <summary>Full case study — Sarnex / operations platform</summary>
+            <div class="case-body">
+              <div class="case-block">
+                <h4>The problem</h4>
+                <p>
+                  Users needed to complete critical tasks without wading through dense information or ambiguous navigation. The experience had to feel credible and calm while surfacing the right actions at the right time—especially for people who visit intermittently and cannot relearn the product on every session.
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>My role</h4>
+                <p>
+                  End-to-end UX and UI design support for AREX: structuring screens and flows, refining interface copy and hierarchy, prototyping in Figma, and partnering with developers on GitHub to align implementation with interaction intent and accessibility considerations.
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>Process</h4>
+                <ul>
+                  <li>Mapped primary user journeys and edge cases to reduce dead-ends and redundant steps.</li>
+                  <li>Iterated low- to mid-fidelity layouts before locking visual patterns and component behavior.</li>
+                  <li>Documented states (default, empty, error, loading) so engineering could ship predictably.</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Research &amp; validation</h4>
+                <p>
+                  Combined product requirements with heuristic review and feedback from stakeholders and internal users. Adjusted layouts when we saw confusion around labeling, hierarchy, or where users expected to land after key actions.
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>Solution &amp; iteration</h4>
+                <p>
+                  Delivered a clearer information architecture and a more consistent UI system across core flows. Refined components through implementation feedback—tightening spacing, copy, and affordances once real data and edge cases appeared in the build.
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>Outcomes</h4>
+                <p>
+                  Stronger alignment between design intent and shipped UI, faster review cycles with engineering, and a product surface that internal reviewers described as easier to scan and act on. Specific metrics and additional artifacts are available on request where confidentiality allows.
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="work-card reveal">
+        <div class="work-card__preview">
+          <div class="dash-proto dash-proto--crm" role="img" aria-label="Generic CRM list and detail prototype with anonymized accounts">
+            <div class="dash-proto__main">
+              <div class="dash-proto__top">
+                <span class="dash-proto__title">Accounts</span>
+                <span class="dash-proto__pill">CRM · Prototype</span>
+              </div>
+              <div class="dash-proto__crm-inner">
+                <div class="dash-proto__crm-list">
+                  <div class="dash-proto__crm-item">Confidential account 01</div>
+                  <div class="dash-proto__crm-item dash-proto__crm-item--sel">Confidential account 02</div>
+                  <div class="dash-proto__crm-item">Confidential account 03</div>
+                  <div class="dash-proto__crm-item">Confidential account 04</div>
+                </div>
+                <div class="dash-proto__crm-detail">
+                  <div class="dash-proto__crm-field"><span>Account</span><strong>Confidential account 02</strong></div>
+                  <div class="dash-proto__crm-field"><span>Owner</span>Account owner · last touch 2h ago</div>
+                  <div class="dash-proto__crm-pipeline">
+                    <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Qualify</div>
+                    <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Discover</div>
+                    <div class="dash-proto__crm-stage">Proposal</div>
+                    <div class="dash-proto__crm-stage">Closed</div>
+                  </div>
+                  <div class="dash-proto__crm-actions">
+                    <span class="dash-proto__crm-btn">Log call</span>
+                    <span class="dash-proto__crm-btn">Create task</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </details>
+        <div class="work-card__meta">
+          <div class="work-card__head">
+            <h3>CRM website</h3>
+            <div class="project-actions" style="flex: unset; margin: 0;">
+              <a class="project-btn-one" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20CRM%20artifacts">Request artifacts</a>
+              <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+          <div class="work-card__tags">
+            <span class="work-card__tag work-card__tag--accent">Internal tools</span>
+            <span class="work-card__tag">List / detail</span>
+            <span class="work-card__tag">Operations UX</span>
+          </div>
+          <p class="work-card__problem">
+            <strong>Problem solved:</strong> Reps and ops staff were losing context when jumping from long record lists into edits and handoffs. A persistent list with a stable detail pane and explicit pipeline stage reduced back-navigation and made “what happens next” obvious for every account.
+          </p>
+          <p class="work-card__note">Generic shell only—labels anonymized; not production data.</p>
+
+          <details class="case-details reveal" id="case-crm" style="margin-top: 1.25rem;">
+            <summary>Full case study — CRM website</summary>
+            <div class="case-body">
+              <div class="case-block">
+                <h4>The problem</h4>
+                <p>
+                  CRM users were losing time switching between views, hunting for record context, and repeating manual steps. The website needed to support heavy daily use without cognitive overload, while still flexible enough for different roles (viewing, updating, reporting).
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>My role</h4>
+                <p>
+                  UX and content design for key pages and flows: navigation model, list and detail patterns, forms and validation messaging, and dashboard-style summaries. Collaborated with developers to ensure responsive behavior and consistent components.
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>Process</h4>
+                <ul>
+                  <li>Audited existing flows and prioritized the highest-frequency tasks for redesign.</li>
+                  <li>Proposed a clearer hierarchy for record data, actions, and history so scanning beats scrolling.</li>
+                  <li>Standardized labels, empty states, and microcopy to reduce ambiguity and support training.</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h4>Research &amp; validation</h4>
+                <p>
+                  Used interviews and informal walkthroughs with people who use the CRM daily. Stress-tested layouts against realistic record complexity and messy data.                   Iterated table density, filters, and primary actions based on where users hesitated or backtracked.
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>Solution &amp; iteration</h4>
+                <p>
+                  Delivered updated page templates and interaction patterns that shorten common paths and expose context earlier in the journey. Followed up post-launch with tweaks to spacing, column priority, and terminology as usage patterns emerged.
+                </p>
+              </div>
+              <div class="case-block">
+                <h4>Outcomes</h4>
+                <p>
+                  More predictable navigation between records and tasks, clearer affordances for primary actions, and qualitative feedback that the interface feels calmer and easier to teach to new team members.
+                </p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </article>
     </div>
   </section>
 
