@@ -619,236 +619,7 @@
       }
     }
 
-    /* ─── PORTFOLIO / CASE STUDIES ───────────────────────── */
-    .portfolio-intro {
-      max-width: 720px;
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.8;
-      margin-bottom: 3rem;
-    }
-
-    .case-study {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.25rem 2rem;
-      margin-bottom: 2.5rem;
-      scroll-margin-top: 5.5rem;
-      transition: border-color 0.25s;
-    }
-
-    .case-study:hover {
-      border-color: rgba(124, 58, 237, 0.45);
-    }
-
-    .case-study:last-of-type {
-      margin-bottom: 0;
-    }
-
-    .case-top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1.25rem;
-      margin-bottom: 1.75rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .case-title-block h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.35rem, 3vw, 1.75rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.5rem;
-    }
-
-    .case-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .case-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.65rem;
-      border-radius: 6px;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-    }
-
-    .case-tag--accent {
-      border-color: rgba(124, 58, 237, 0.4);
-      color: var(--purple-light);
-    }
-
-    .case-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      align-items: center;
-    }
-
-    .case-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.55rem 1rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      color: var(--text-muted);
-      background: var(--bg3);
-      transition: all 0.2s;
-    }
-
-    .case-link:hover {
-      border-color: var(--purple);
-      color: var(--purple-light);
-    }
-
-    .case-link--primary {
-      background: rgba(124, 58, 237, 0.18);
-      border-color: rgba(124, 58, 237, 0.5);
-      color: var(--accent);
-    }
-
-    .case-link--primary:hover {
-      background: rgba(124, 58, 237, 0.28);
-    }
-
-    .case-body {
-      display: grid;
-      gap: 1.75rem;
-    }
-
-    .case-block h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--purple-light);
-      margin-bottom: 0.65rem;
-    }
-
-    .case-block p,
-    .case-block li {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-    }
-
-    .case-block ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .case-block li {
-      padding-left: 1.1rem;
-      position: relative;
-    }
-
-    .case-block li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.55em;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--purple);
-    }
-
-    .case-figure {
-      margin: 0.25rem 0 0;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: var(--bg3);
-    }
-
-    .case-figure img {
-      width: 100%;
-      height: clamp(180px, 28vw, 260px);
-      object-fit: cover;
-      object-position: center;
-      display: block;
-      filter: saturate(0.92) contrast(1.02);
-    }
-
-    .case-figure figcaption {
-      padding: 0.85rem 1rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-      border-top: 1px solid var(--border);
-      background: rgba(15, 15, 19, 0.5);
-    }
-
-    .case-figure figcaption a {
-      color: var(--purple-light);
-    }
-
-    /* ─── PROJECTS (Hussam-style rows + Marya theme) ─────── */
-    .project-block {
-      margin-bottom: 3.5rem;
-    }
-
-    .project-block:last-of-type {
-      margin-bottom: 0;
-    }
-
-    .project-block-h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.75rem, 4vw, 2.75rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 1rem 1.5rem;
-      margin-bottom: 1rem;
-      clear: both;
-    }
-
-    .project-row::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-
-    .project-row-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-      font-weight: 700;
-      color: var(--purple-light);
-      flex: 0 0 auto;
-      min-width: min(100%, 140px);
-      margin: 0;
-      padding-top: 0.35rem;
-    }
-
+    /* ─── Project CTAs (work cards) ──────────────────────── */
     .project-actions {
       display: flex;
       flex-wrap: wrap;
@@ -892,419 +663,37 @@
       background: rgba(124, 58, 237, 0.12);
     }
 
-    .project-confidential {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      max-width: 720px;
-      margin: 0 0 1.25rem;
-      padding: 1rem 1.15rem;
-      border-radius: 10px;
-      border-left: 3px solid var(--purple);
-      background: rgba(124, 58, 237, 0.08);
-    }
-
-    .case-details {
-      margin-top: 1.75rem;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--bg2);
-      overflow: hidden;
-    }
-
-    .case-details summary {
-      cursor: pointer;
-      padding: 1rem 1.25rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      list-style: none;
-      user-select: none;
-    }
-
-    .case-details summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .case-details summary::after {
-      content: '+';
-      float: right;
-      color: var(--purple-light);
-      font-weight: 700;
-    }
-
-    .case-details[open] summary::after {
-      content: '−';
-    }
-
-    .case-details .case-body {
-      padding: 0 1.25rem 1.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    /* ─── DASHBOARD PROTOTYPES (HTML/CSS — portfolio only) ─ */
-    .project-proto-wrap {
+    .case-summary {
       margin-top: 1.25rem;
-    }
-
-    .project-proto-problem {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      max-width: 720px;
-      margin: 0 0 1rem;
-      padding: 0.85rem 1rem;
-      border-radius: 8px;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-    }
-
-    .project-proto-problem strong {
-      color: var(--text);
-    }
-
-    .project-proto-disclaimer {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin: 0.65rem 0 0;
-      font-style: italic;
-    }
-
-    .dash-proto {
-      --d-bg: #0c0c11;
-      --d-panel: #14141c;
-      --d-line: #2a2a3a;
-      --d-label: #6b6b80;
-      --d-accent: #7c3aed;
-      --d-positive: #34d399;
-      font-size: clamp(9px, 2vw, 11px);
+      padding: 1.25rem 1.35rem;
       border-radius: 12px;
-      overflow: hidden;
       border: 1px solid var(--border);
-      background: var(--d-bg);
-      display: grid;
-      grid-template-columns: 4.2em 1fr;
-      min-height: 14rem;
-      max-height: 22rem;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      background: var(--bg2);
     }
 
-    .dash-proto__side {
-      background: var(--d-panel);
-      border-right: 1px solid var(--d-line);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0.85em 0;
-      gap: 0.65em;
-    }
-
-    .dash-proto__logo {
-      width: 1.85em;
-      height: 1.85em;
-      border-radius: 6px;
-      background: linear-gradient(135deg, var(--d-accent), #a78bfa);
-      margin-bottom: 0.5em;
-    }
-
-    .dash-proto__nav-dot {
-      width: 1.35em;
-      height: 1.35em;
-      border-radius: 6px;
-      background: var(--d-line);
-    }
-
-    .dash-proto__nav-dot--active {
-      background: var(--d-accent);
-      box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.35);
-    }
-
-    .dash-proto__main {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      padding: 0.75em 0.9em 0.85em;
-      gap: 0.65em;
-    }
-
-    .dash-proto__top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5em;
-    }
-
-    .dash-proto__title {
+    .case-summary__title {
       font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
       font-weight: 700;
-      font-size: 1.05em;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-
-    .dash-proto__pill {
-      font-size: 0.75em;
-      padding: 0.35em 0.7em;
-      border-radius: 99px;
-      background: rgba(124, 58, 237, 0.18);
-      color: var(--accent);
-      border: 1px solid rgba(124, 58, 237, 0.4);
-    }
-
-    .dash-proto__kpis {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.5em;
-    }
-
-    @media (max-width: 600px) {
-      .dash-proto__kpis {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .dash-proto__kpi {
-      background: var(--d-panel);
-      border: 1px solid var(--d-line);
-      border-radius: 8px;
-      padding: 0.45em 0.55em;
-    }
-
-    .dash-proto__kpi-label {
-      font-size: 0.65em;
-      color: var(--d-label);
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 0.25em;
+      color: var(--purple-light);
+      margin: 0 0 1rem;
     }
 
-    .dash-proto__kpi-val {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.05em;
+    .case-summary p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin: 0 0 0.85rem;
+    }
+
+    .case-summary p:last-child {
+      margin-bottom: 0;
+    }
+
+    .case-summary strong {
       color: var(--text);
-    }
-
-    .dash-proto__kpi-delta {
-      font-size: 0.7em;
-      color: var(--d-positive);
-      margin-top: 0.15em;
-    }
-
-    .dash-proto__mid {
-      display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 0.5em;
-      flex: 1;
-      min-height: 0;
-    }
-
-    @media (max-width: 540px) {
-      .dash-proto__mid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .dash-proto__chart {
-      background: var(--d-panel);
-      border: 1px solid var(--d-line);
-      border-radius: 8px;
-      padding: 0.5em;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4em;
-    }
-
-    .dash-proto__chart-caption {
-      font-size: 0.7em;
-      color: var(--d-label);
-    }
-
-    .dash-proto__bars {
-      display: flex;
-      align-items: flex-end;
-      justify-content: stretch;
-      gap: 4px;
-      height: 4.8em;
-      padding-top: 0.25em;
-    }
-
-    .dash-proto__bar {
-      flex: 1 1 0;
-      align-self: flex-end;
-      border-radius: 3px 3px 0 0;
-      background: linear-gradient(180deg, var(--d-accent), #5b21b6);
-      opacity: 0.88;
-    }
-
-    .dash-proto__bar:nth-child(1) {
-      height: 32%;
-    }
-
-    .dash-proto__bar:nth-child(2) {
-      height: 48%;
-    }
-
-    .dash-proto__bar:nth-child(3) {
-      height: 68%;
-    }
-
-    .dash-proto__bar:nth-child(4) {
-      height: 52%;
-    }
-
-    .dash-proto__bar:nth-child(5) {
-      height: 82%;
-    }
-
-    .dash-proto__bar:nth-child(6) {
-      height: 44%;
-    }
-
-    .dash-proto__bar:nth-child(7) {
-      height: 92%;
-    }
-
-    .dash-proto__list {
-      background: var(--d-panel);
-      border: 1px solid var(--d-line);
-      border-radius: 8px;
-      padding: 0.45em 0.55em;
-      display: flex;
-      flex-direction: column;
-      gap: 0.35em;
-    }
-
-    .dash-proto__list-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.72em;
-      padding: 0.35em 0.4em;
-      border-radius: 4px;
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .dash-proto__list-row strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .dash-proto__tag {
-      font-size: 0.65em;
-      padding: 0.15em 0.45em;
-      border-radius: 4px;
-      background: rgba(52, 211, 153, 0.15);
-      color: var(--d-positive);
-    }
-
-    /* CRM-style prototype */
-    .dash-proto--crm {
-      grid-template-columns: 1fr;
-      max-height: none;
-      min-height: 16rem;
-    }
-
-    .dash-proto--crm .dash-proto__crm-inner {
-      display: grid;
-      grid-template-columns: 9.5em 1fr;
-      gap: 0.55em;
-      flex: 1;
-      min-height: 11rem;
-    }
-
-    @media (max-width: 540px) {
-      .dash-proto--crm .dash-proto__crm-inner {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .dash-proto--crm .dash-proto__main {
-      padding: 0.65em 0.85em;
-    }
-
-    .dash-proto__crm-list {
-      background: var(--d-panel);
-      border: 1px solid var(--d-line);
-      border-radius: 8px;
-      padding: 0.4em;
-      display: flex;
-      flex-direction: column;
-      gap: 0.3em;
-    }
-
-    .dash-proto__crm-item {
-      font-size: 0.68em;
-      padding: 0.5em 0.45em;
-      border-radius: 6px;
-      color: var(--d-label);
-      border: 1px solid transparent;
-    }
-
-    .dash-proto__crm-item--sel {
-      background: rgba(124, 58, 237, 0.12);
-      border-color: rgba(124, 58, 237, 0.35);
-      color: var(--text);
-    }
-
-    .dash-proto__crm-detail {
-      background: var(--d-panel);
-      border: 1px solid var(--d-line);
-      border-radius: 8px;
-      padding: 0.55em;
-      display: flex;
-      flex-direction: column;
-      gap: 0.45em;
-    }
-
-    .dash-proto__crm-field {
-      font-size: 0.68em;
-    }
-
-    .dash-proto__crm-field span {
-      color: var(--d-label);
-      display: block;
-      font-size: 0.95em;
-      margin-bottom: 0.15em;
-    }
-
-    .dash-proto__crm-actions {
-      display: flex;
-      gap: 0.35em;
-      margin-top: 0.25em;
-    }
-
-    .dash-proto__crm-btn {
-      font-size: 0.65em;
-      padding: 0.4em 0.65em;
-      border-radius: 6px;
-      border: 1px solid var(--d-line);
-      background: rgba(124, 58, 237, 0.2);
-      color: var(--accent);
-    }
-
-    .dash-proto__crm-pipeline {
-      display: flex;
-      gap: 0.35em;
-      margin-top: 0.35em;
-    }
-
-    .dash-proto__crm-stage {
-      flex: 1;
-      text-align: center;
-      font-size: 0.6em;
-      color: var(--d-label);
-      padding: 0.35em 0.2em;
-      border-radius: 6px;
-      border: 1px dashed var(--d-line);
-    }
-
-    .dash-proto__crm-stage--on {
-      border-style: solid;
-      border-color: var(--d-accent);
-      color: var(--accent);
-      background: rgba(124, 58, 237, 0.1);
     }
 
     /* ─── SELECTED WORK (Dribbble-style project cards) ─────── */
@@ -1874,7 +1263,7 @@
       <p class="work-showcase__ref reveal">
         Large preview frames and clear project hierarchy, similar in spirit to designer portfolio layouts such as
         <a href="https://dribbble.com/shots/25396299-Personal-Website-For-UI-Designer" target="_blank" rel="noopener noreferrer">Personal Website For UI Designer on Dribbble</a>.
-        Below, a control-center dashboard is rebuilt in HTML/CSS from a reference companion to my AREX work; <strong style="color: var(--text);">client names and identities are removed</strong> for confidentiality.
+        The preview is a control-center dashboard rebuilt in HTML/CSS from work at AREX; <strong style="color: var(--text);">client names and identities are removed</strong> for confidentiality.
       </p>
 
       <article class="work-card reveal">
@@ -2000,7 +1389,7 @@
         </div>
         <div class="work-card__meta">
           <div class="work-card__head">
-            <h3>Operations control center</h3>
+            <h3>Sarnex — operations control center</h3>
             <div class="project-actions" style="flex: unset; margin: 0;">
               <a id="sarnex-website-link" class="project-btn-one" target="_blank" rel="noopener noreferrer" href="mailto:soufi.marya@gmail.com?subject=Sarnex%20%E2%80%94%20access%20to%20live%20application">Visit website</a>
               <a class="project-btn-one project-btn-one--muted" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20operations%20artifacts">Request artifacts</a>
@@ -2018,146 +1407,24 @@
           </p>
           <p class="work-card__note">Redacted recreation for this portfolio only; not a live data connection. Original layout informed by internal product work.</p>
 
-          <details class="case-details reveal" id="case-sarnex" style="margin-top: 1.25rem;">
-            <summary>Full case study — Sarnex / operations platform</summary>
-            <div class="case-body">
-              <div class="case-block">
-                <h4>The problem</h4>
-                <p>
-                  Users needed to complete critical tasks without wading through dense information or ambiguous navigation. The experience had to feel credible and calm while surfacing the right actions at the right time—especially for people who visit intermittently and cannot relearn the product on every session.
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>My role</h4>
-                <p>
-                  End-to-end UX and UI design support for AREX: structuring screens and flows, refining interface copy and hierarchy, prototyping in Figma, and partnering with developers on GitHub to align implementation with interaction intent and accessibility considerations.
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>Process</h4>
-                <ul>
-                  <li>Mapped primary user journeys and edge cases to reduce dead-ends and redundant steps.</li>
-                  <li>Iterated low- to mid-fidelity layouts before locking visual patterns and component behavior.</li>
-                  <li>Documented states (default, empty, error, loading) so engineering could ship predictably.</li>
-                </ul>
-              </div>
-              <div class="case-block">
-                <h4>Research &amp; validation</h4>
-                <p>
-                  Combined product requirements with heuristic review and feedback from stakeholders and internal users. Adjusted layouts when we saw confusion around labeling, hierarchy, or where users expected to land after key actions.
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>Solution &amp; iteration</h4>
-                <p>
-                  Delivered a clearer information architecture and a more consistent UI system across core flows. Refined components through implementation feedback—tightening spacing, copy, and affordances once real data and edge cases appeared in the build.
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>Outcomes</h4>
-                <p>
-                  Stronger alignment between design intent and shipped UI, faster review cycles with engineering, and a product surface that internal reviewers described as easier to scan and act on. Specific metrics and additional artifacts are available on request where confidentiality allows.
-                </p>
-              </div>
-            </div>
-          </details>
-        </div>
-      </article>
-
-      <article class="work-card reveal">
-        <div class="work-card__preview">
-          <div class="dash-proto dash-proto--crm" role="img" aria-label="Generic CRM list and detail prototype with anonymized accounts">
-            <div class="dash-proto__main">
-              <div class="dash-proto__top">
-                <span class="dash-proto__title">Accounts</span>
-                <span class="dash-proto__pill">CRM · Prototype</span>
-              </div>
-              <div class="dash-proto__crm-inner">
-                <div class="dash-proto__crm-list">
-                  <div class="dash-proto__crm-item">Confidential account 01</div>
-                  <div class="dash-proto__crm-item dash-proto__crm-item--sel">Confidential account 02</div>
-                  <div class="dash-proto__crm-item">Confidential account 03</div>
-                  <div class="dash-proto__crm-item">Confidential account 04</div>
-                </div>
-                <div class="dash-proto__crm-detail">
-                  <div class="dash-proto__crm-field"><span>Account</span><strong>Confidential account 02</strong></div>
-                  <div class="dash-proto__crm-field"><span>Owner</span>Account owner · last touch 2h ago</div>
-                  <div class="dash-proto__crm-pipeline">
-                    <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Qualify</div>
-                    <div class="dash-proto__crm-stage dash-proto__crm-stage--on">Discover</div>
-                    <div class="dash-proto__crm-stage">Proposal</div>
-                    <div class="dash-proto__crm-stage">Closed</div>
-                  </div>
-                  <div class="dash-proto__crm-actions">
-                    <span class="dash-proto__crm-btn">Log call</span>
-                    <span class="dash-proto__crm-btn">Create task</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="case-summary reveal" id="case-sarnex">
+            <h4 class="case-summary__title">Case study summary</h4>
+            <p>
+              <strong>Context:</strong> Sarnex is confidential web product work at AREX Capital—an operations surface used by administrators to oversee portfolios, brokers, and platform health.
+            </p>
+            <p>
+              <strong>Problem:</strong> Key metrics and workflows were scattered across tools. Admins (including people who only log in occasionally) needed a single, trustworthy home that surfaces status, AUM context, connectivity risk, and next steps without noise or ambiguous navigation.
+            </p>
+            <p>
+              <strong>Role:</strong> End-to-end UX and UI: information architecture, flows, interface copy and hierarchy, Figma prototypes, component states (empty / loading / error), and handoff with engineering—including collaboration via GitHub.
+            </p>
+            <p>
+              <strong>Approach:</strong> Mapped primary journeys and edge cases; iterated layouts using heuristics plus stakeholder and internal-user feedback; tightened labels and hierarchy wherever users misread priority or landing context; documented behavior so builds stayed predictable.
+            </p>
+            <p>
+              <strong>Outcome:</strong> Clearer IA and a more consistent UI across core flows, faster design–development alignment, and surfaces reviewers described as easier to scan and act on. Quantitative details and extra artifacts are available on request under NDA.
+            </p>
           </div>
-        </div>
-        <div class="work-card__meta">
-          <div class="work-card__head">
-            <h3>CRM website</h3>
-            <div class="project-actions" style="flex: unset; margin: 0;">
-              <a class="project-btn-one" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20CRM%20artifacts">Request artifacts</a>
-              <a class="project-btn-one project-btn-one--muted" href="https://github.com/MaryaSoufi" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div>
-          </div>
-          <div class="work-card__tags">
-            <span class="work-card__tag work-card__tag--accent">Internal tools</span>
-            <span class="work-card__tag">List / detail</span>
-            <span class="work-card__tag">Operations UX</span>
-          </div>
-          <p class="work-card__problem">
-            <strong>Problem solved:</strong> Reps and ops staff were losing context when jumping from long record lists into edits and handoffs. A persistent list with a stable detail pane and explicit pipeline stage reduced back-navigation and made “what happens next” obvious for every account.
-          </p>
-          <p class="work-card__note">Generic shell only—labels anonymized; not production data.</p>
-
-          <details class="case-details reveal" id="case-crm" style="margin-top: 1.25rem;">
-            <summary>Full case study — CRM website</summary>
-            <div class="case-body">
-              <div class="case-block">
-                <h4>The problem</h4>
-                <p>
-                  CRM users were losing time switching between views, hunting for record context, and repeating manual steps. The website needed to support heavy daily use without cognitive overload, while still flexible enough for different roles (viewing, updating, reporting).
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>My role</h4>
-                <p>
-                  UX and content design for key pages and flows: navigation model, list and detail patterns, forms and validation messaging, and dashboard-style summaries. Collaborated with developers to ensure responsive behavior and consistent components.
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>Process</h4>
-                <ul>
-                  <li>Audited existing flows and prioritized the highest-frequency tasks for redesign.</li>
-                  <li>Proposed a clearer hierarchy for record data, actions, and history so scanning beats scrolling.</li>
-                  <li>Standardized labels, empty states, and microcopy to reduce ambiguity and support training.</li>
-                </ul>
-              </div>
-              <div class="case-block">
-                <h4>Research &amp; validation</h4>
-                <p>
-                  Used interviews and informal walkthroughs with people who use the CRM daily. Stress-tested layouts against realistic record complexity and messy data.                   Iterated table density, filters, and primary actions based on where users hesitated or backtracked.
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>Solution &amp; iteration</h4>
-                <p>
-                  Delivered updated page templates and interaction patterns that shorten common paths and expose context earlier in the journey. Followed up post-launch with tweaks to spacing, column priority, and terminology as usage patterns emerged.
-                </p>
-              </div>
-              <div class="case-block">
-                <h4>Outcomes</h4>
-                <p>
-                  More predictable navigation between records and tasks, clearer affordances for primary actions, and qualitative feedback that the interface feels calmer and easier to teach to new team members.
-                </p>
-              </div>
-            </div>
-          </details>
         </div>
       </article>
     </div>
