@@ -795,6 +795,33 @@
       font-weight: 700;
       letter-spacing: -0.02em;
       margin: 0;
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .work-card__visit {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      background: transparent;
+      border: 3px solid var(--purple-light);
+      padding: 0.45rem 1.5rem;
+      border-radius: 80px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.25s, color 0.25s, transform 0.2s, box-shadow 0.25s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .work-card__visit:hover {
+      background: var(--purple-light);
+      color: var(--bg);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
     }
 
     .work-card__tags {
@@ -1288,7 +1315,7 @@
   <!-- PROJECTS: Dribbble-style selected work cards + Operations Control Center replica (redacted) -->
   <section id="work">
     <div class="work-showcase">
-      <p class="work-showcase__eyebrow reveal">Selected work</p>
+      <p class="work-showcase__eyebrow reveal">Projects</p>
       <h2 class="work-showcase__title reveal">UX &amp; product design</h2>
 
       <article class="work-card reveal">
@@ -1415,6 +1442,7 @@
         <div class="work-card__meta">
           <div class="work-card__head">
             <h3>Sarnex — Investment Dashboard Redesign</h3>
+            <a href="https://dev.spec.sarnex.net/login" class="work-card__visit" target="_blank" rel="noopener noreferrer">Visit website</a>
           </div>
           <p class="work-card__meta-line"><strong>Role:</strong> UX/UI &amp; Product Designer</p>
           <p class="work-card__meta-line"><strong>Tools:</strong> Figma, Cursor, GitHub</p>
