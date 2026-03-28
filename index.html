@@ -663,37 +663,107 @@
       background: rgba(124, 58, 237, 0.12);
     }
 
-    .case-summary {
+    .case-study-details {
       margin-top: 1.25rem;
-      padding: 1.25rem 1.35rem;
-      border-radius: 12px;
       border: 1px solid var(--border);
+      border-radius: 12px;
       background: var(--bg2);
+      overflow: hidden;
     }
 
-    .case-summary__title {
+    .case-study-details summary {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.8rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      list-style: none;
+      user-select: none;
+      background: var(--bg3);
+      transition: background 0.2s;
+    }
+
+    .case-study-details summary:hover {
+      background: rgba(124, 58, 237, 0.12);
+    }
+
+    .case-study-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .case-study-details summary::after {
+      content: '+';
+      float: right;
+      color: var(--purple-light);
       font-weight: 700;
-      letter-spacing: 0.12em;
+    }
+
+    .case-study-details[open] summary::after {
+      content: '−';
+    }
+
+    .case-study-details__body {
+      padding: 1.25rem 1.35rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .case-study-details__body h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--purple-light);
-      margin: 0 0 1rem;
+      margin: 1.15rem 0 0.55rem;
     }
 
-    .case-summary p {
+    .case-study-details__body h4:first-of-type {
+      margin-top: 0;
+    }
+
+    .case-study-details__title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin: 0 0 1rem;
+      line-height: 1.25;
+    }
+
+    .case-study-details__meta {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0 0 0.45rem;
+    }
+
+    .case-study-details__meta strong {
+      color: var(--text);
+    }
+
+    .case-study-details__body > p {
       font-size: 0.9rem;
       color: var(--text-muted);
       line-height: 1.75;
-      margin: 0 0 0.85rem;
+      margin: 0 0 0.35rem;
     }
 
-    .case-summary p:last-child {
+    .case-study-details__body ul {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .case-study-details__body li {
+      margin-bottom: 0.45rem;
+    }
+
+    .case-study-details__body li:last-child {
       margin-bottom: 0;
-    }
-
-    .case-summary strong {
-      color: var(--text);
     }
 
     /* ─── SELECTED WORK (Dribbble-style project cards) ─────── */
@@ -1389,7 +1459,7 @@
         </div>
         <div class="work-card__meta">
           <div class="work-card__head">
-            <h3>Sarnex — operations control center</h3>
+            <h3>Sarnex — investment dashboard redesign</h3>
             <div class="project-actions" style="flex: unset; margin: 0;">
               <a id="sarnex-website-link" class="project-btn-one" target="_blank" rel="noopener noreferrer" href="mailto:soufi.marya@gmail.com?subject=Sarnex%20%E2%80%94%20access%20to%20live%20application">Visit website</a>
               <a class="project-btn-one project-btn-one--muted" href="mailto:soufi.marya@gmail.com?subject=Portfolio%20%E2%80%94%20operations%20artifacts">Request artifacts</a>
@@ -1398,33 +1468,40 @@
           </div>
           <div class="work-card__tags">
             <span class="work-card__tag work-card__tag--accent">AREX Capital</span>
-            <span class="work-card__tag">Web app</span>
-            <span class="work-card__tag">Admin UX</span>
-            <span class="work-card__tag">Dense data UI</span>
+            <span class="work-card__tag">UX / UI</span>
+            <span class="work-card__tag">Investment dashboard</span>
+            <span class="work-card__tag">Figma</span>
           </div>
           <p class="work-card__problem">
-            <strong>Problem solved:</strong> Portfolio and broker teams needed one place to see health, AUM, connectivity risk, and highest-value relationships—instead of scattered spreadsheets and consoles. This home view surfaces the four signals admins check first, a trend line for equity context, and shortcuts into day-to-day workflows.
+            <strong>Overview:</strong> Redesign of a web-based investment dashboard to simplify portfolio management and improve usability for clients working with complex financial data. Preview above is a redacted layout study—inspired by the live product—not a data connection.
           </p>
-          <p class="work-card__note">Redacted recreation for this portfolio only; not a live data connection. Original layout informed by internal product work.</p>
+          <p class="work-card__note">Role: UX/UI &amp; Product Designer · Tools: Figma, Cursor, GitHub. Full write-up is in the case study below.</p>
 
-          <div class="case-summary reveal" id="case-sarnex">
-            <h4 class="case-summary__title">Case study summary</h4>
-            <p>
-              <strong>Context:</strong> Sarnex is confidential web product work at AREX Capital—an operations surface used by administrators to oversee portfolios, brokers, and platform health.
-            </p>
-            <p>
-              <strong>Problem:</strong> Key metrics and workflows were scattered across tools. Admins (including people who only log in occasionally) needed a single, trustworthy home that surfaces status, AUM context, connectivity risk, and next steps without noise or ambiguous navigation.
-            </p>
-            <p>
-              <strong>Role:</strong> End-to-end UX and UI: information architecture, flows, interface copy and hierarchy, Figma prototypes, component states (empty / loading / error), and handoff with engineering—including collaboration via GitHub.
-            </p>
-            <p>
-              <strong>Approach:</strong> Mapped primary journeys and edge cases; iterated layouts using heuristics plus stakeholder and internal-user feedback; tightened labels and hierarchy wherever users misread priority or landing context; documented behavior so builds stayed predictable.
-            </p>
-            <p>
-              <strong>Outcome:</strong> Clearer IA and a more consistent UI across core flows, faster design–development alignment, and surfaces reviewers described as easier to scan and act on. Quantitative details and extra artifacts are available on request under NDA.
-            </p>
-          </div>
+          <details class="case-study-details reveal" id="case-sarnex">
+            <summary>Case study</summary>
+            <div class="case-study-details__body">
+              <p class="case-study-details__title">Investment Dashboard Redesign</p>
+              <p class="case-study-details__meta"><strong>Role:</strong> UX/UI &amp; Product Designer</p>
+              <p class="case-study-details__meta"><strong>Tools:</strong> Figma, Cursor, GitHub</p>
+              <h4>Project overview</h4>
+              <p>
+                Redesigned a web-based investment dashboard to simplify portfolio management and improve usability for clients managing complex financial data.
+              </p>
+              <h4>What I did</h4>
+              <ul>
+                <li>Analyzed user flows and mapped pain points to streamline navigation.</li>
+                <li>Designed intuitive dashboards and components for clear financial data visualization.</li>
+                <li>Collaborated with developers to implement designs and ensure usability.</li>
+                <li>Iterated based on stakeholder feedback and usability best practices.</li>
+              </ul>
+              <h4>Impact</h4>
+              <ul>
+                <li>Improved clarity and efficiency of portfolio insights.</li>
+                <li>Reduced cognitive load for users navigating complex investment data.</li>
+                <li>Contributed to a scalable, user-centered design system for future updates.</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </article>
     </div>
